@@ -1,12 +1,17 @@
+import Link from "next/link";
+import style from "./global-layout.module.css"
+
 export default function GlobalLayout ({ children }) {
 
   return (
-    <div>
-      <header>헤더</header>
-      <main>
+    <div className={style.container}>
+      <header className={style.header}>
+        <Link href={"/"}>📚 REACT BOOKS</Link>
+        </header>
+      <main className={style.main}>
         { children }
       </main>
-      <footer>푸터</footer>
+      <footer className={style.footer}>제작 @kmk</footer>
     </div>
   );
 }
